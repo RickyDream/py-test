@@ -30,7 +30,8 @@ jobs:
         python bing2.py
     - name: sync
       run: |
-        /usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-        /usr/bin/git add .
-        /usr/bin/git commit -m "更新success.txt"
-        /usr/bin/git push -u origin master
+        git config --global user.email "you@example.com"
+        git config --global user.name "Your Name"
+        git add .
+        git commit -m "更新success.txt"
+        git push -u origin master
